@@ -39,16 +39,11 @@ local function AddJob(citizenid, job, grade)
     })
 end
 
-local function RemoveJob(citizenid, rjob, rgrade)
+local function RemoveJob(citizenid, job, rgrade)
     local jobs = GetJobs(citizenid)
-    for job, grade in pairs(jobs) do
-        if job == rjob and grade == rgrade then
-            jobs[job] = nil
-            break
-        end
-    end
+    jobs[job] = nil
     local Player = QBCore.Functions.GetPlayerByCitizenId(citizenid)
-    if Player.PlayerData.job.name == rjob then
+    if Player.PlayerData.job.name == job then
         for k,v in pairs(jobs) do
             Player.Functions.SetJob(k,v)
             break
@@ -129,6 +124,7 @@ QBCore.Functions.CreateCallback("ps-multijob:getJobs",function(source, cb)
             name = job,
             grade = grade,
             description = Config.Descriptions[job],
+            icon = Config.FontAwesomeIcons[job],
             label = QBCore.Shared.Jobs[job].label,
             grade_label = QBCore.Shared.Jobs[job].grades[tostring(grade)].name,
             salary = QBCore.Shared.Jobs[job].grades[tostring(grade)].payment,
@@ -150,6 +146,12 @@ end)
 RegisterNetEvent("ps-multijob:changeJob",function(cjob, cgrade)
     local source = source
     local Player = QBCore.Functions.GetPlayer(source)
+
+    if cjob == "unemployed" and cgrade == 0 then
+        Player.Functions.SetJob(cjob, cgrade)
+        return
+    end
+
     local jobs = GetJobs(Player.PlayerData.citizenid)
     for job, grade in pairs(jobs) do
         if cjob == job and cgrade == grade then

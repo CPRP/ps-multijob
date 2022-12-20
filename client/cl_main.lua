@@ -16,6 +16,7 @@ local function OpenUI()
         activeJob = job["name"],
         onDuty = job["onduty"],
         jobs = GetJobs(),
+        side = Config.Side,
     })
 end
 
@@ -49,6 +50,18 @@ RegisterNUICallback('toggleduty', function(data, cb)
     end
     
     TriggerServerEvent("QBCore:ToggleDuty")
+end)
+
+RegisterNetEvent('QBCore:Client:OnJobUpdate', function(JobInfo)
+    SendNUIMessage({
+        action = 'updatejob',
+        name = JobInfo["name"],
+        label = JobInfo["label"],
+        onDuty = JobInfo["onduty"],
+        gradeLabel = JobInfo["grade"].name,
+        grade = JobInfo["grade"].level,
+        payment = JobInfo["payment"],
+    })
 end)
 
 RegisterCommand("jobmenu", OpenUI)
