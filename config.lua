@@ -15,6 +15,9 @@ Config.DenyDuty = {
 
 Config.WhitelistJobs = {
 	["police"] = true,
+	["bcso"] = true,
+	["sasp"] = true,
+	["sapr"] = true,
 	["ambulance"] = true,
 	["mechanic"] = true,
 	["judge"] = true,
@@ -45,11 +48,15 @@ Config.WhitelistJobs = {
 	["bahama"] = true,
 	["limeys"] = true,
 	["splitsides"] = true,
+	["insurance"] = true,
 }
 
 Config.Descriptions = {
 	-- Whitelisted
 	["police"] = "Shoot some criminals or maybe be a good cop and arrest them",
+	["bcso"] = "Shoot some criminals or maybe be a good cop and arrest them",
+	["sasp"] = "Shoot some criminals or maybe be a good cop and arrest them",
+	["sapr"] = "Shoot some criminals or maybe be a good cop and arrest them",
 	["ambulance"] = "Fix the bullet holes",
 	["mechanic"] = "Fix the bullet holes",
 	["judge"] = "Decide if people are guilty",
@@ -80,6 +87,7 @@ Config.Descriptions = {
 	["bahama"] = "The place to be on the weekend!",
 	["limeys"] = "Another bar in LS!",
 	["splitsides"] = "This is your bar if you love the color red!",
+	["insurance"] = "Help others with their insurance needs.",
 	-- Not Whitelisted
 	["mailcarrier"] = "Deliver mail around San Andreas",
 	["trucker"] = "Deliver packages around San Andreas",
@@ -94,6 +102,9 @@ Config.Descriptions = {
 Config.FontAwesomeIcons = {
 	-- Whitelisted
 	["police"] = "fa-solid fa-handcuffs",
+	["bcso"] = "fa-solid fa-handcuffs",
+	["sasp"] = "fa-solid fa-handcuffs",
+	["sapr"] = "fa-solid fa-handcuffs",
 	["ambulance"] = "fa-solid fa-user-doctor",
 	["mechanic"] = "fa-solid fa-wrench",
 	["judge"] = "fa-solid fa-gave",
@@ -124,6 +135,7 @@ Config.FontAwesomeIcons = {
 	["bahama"] = "fa-solid fa-martini-glass",
 	["limeys"] = "fa-solid fa-beer-mug",
 	["splitsides"] = "fa-solid fa-beer-mug",
+	["insurance"] = "fa-solid fa-sign-hanging",
 	-- Not Whitelisted
 	["mailcarrier"] = "fa-sharp fa-solid fa-mailbox-flag-up",
 	["trucker"] = "fa-solid fa-truck-front",
