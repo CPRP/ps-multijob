@@ -49,6 +49,7 @@ Config.WhitelistJobs = {
 	["limeys"] = true,
 	["splitsides"] = true,
 	["insurance"] = true,
+	["hornys"] = true,
 }
 
 Config.Descriptions = {
@@ -88,6 +89,7 @@ Config.Descriptions = {
 	["limeys"] = "Another bar in LS!",
 	["splitsides"] = "This is your bar if you love the color red!",
 	["insurance"] = "Help others with their insurance needs.",
+	["hornys"] = "The best place to feed your hunger!",
 	-- Not Whitelisted
 	["mailcarrier"] = "Deliver mail around San Andreas",
 	["trucker"] = "Deliver packages around San Andreas",
@@ -136,6 +138,7 @@ Config.FontAwesomeIcons = {
 	["limeys"] = "fa-solid fa-beer-mug",
 	["splitsides"] = "fa-solid fa-beer-mug",
 	["insurance"] = "fa-solid fa-sign-hanging",
+	["upnatom"] = "fa-solid fa-french-fries",
 	-- Not Whitelisted
 	["mailcarrier"] = "fa-sharp fa-solid fa-mailbox-flag-up",
 	["trucker"] = "fa-solid fa-truck-front",
